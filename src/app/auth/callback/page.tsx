@@ -17,15 +17,21 @@ const AuthCallbackPage = async () => {
     });
 
     if (!existingUser) {
+        const userName = user.firstName && user.lastName
+            ? `${user.firstName} ${user.lastName}`
+            : user.username || "User";
+
         await db.user.create({
             data: {
                 id: user.id,
                 clerkId: user.id,
                 email: user.emailAddresses[0].emailAddress,
+                name: userName,
                 avatar: user.imageUrl,
             },
         });
 
+        console.log("criando usuario");
         redirect("/app");
     }
 
