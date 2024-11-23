@@ -18,6 +18,8 @@ import Pricing from "./marketing/pricing";
 import Reviews from "./marketing/reviews";
 import CTA from "./marketing/cta";
 import Footer from "./marketing/footer";
+import useTheme from "./global/ThemeProvider";
+import ModeToggle from "./global/mode-toggle";
 
 export {
     Icons,
@@ -38,4 +40,6 @@ export {
     SignInForm,
     SignUpForm,
     Providers,
+    useTheme,
+    ModeToggle
 };

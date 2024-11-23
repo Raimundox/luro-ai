@@ -44,7 +44,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                 <ul className="flex flex-col items-start flex-1 w-full space-y-3">
                     <li
                         onClick={() => setIsOpen(false)}
-                        className="w-full px-4 py-2 text-lg hover:text-muted-foreground font-normal transition transform rounded-md cursor-pointer text-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                        className="w-full px-4 py-2 text-lg hover:text-muted-foreground font-normal transition transform rounded-md cursor-pointer  text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                     >
                         <Link href="/how-it-works" className="flex items-center w-full text-start">
                             <UserCog className="w-4 h-4 mr-2" />
@@ -61,7 +61,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                             </AccordionTrigger>
                             <AccordionContent onClick={() => setIsOpen(false)} className="flex flex-col items-start gap-1 mt-1">
                                 <li
-                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer text-foreground/80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer /80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                                 >
                                     <Link href="/" className="flex items-center w-full text-start">
                                         <Captions className="w-4 h-4 mr-2" />
@@ -69,7 +69,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                                     </Link>
                                 </li>
                                 <li
-                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer text-foreground/80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer /80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                                 >
                                     <Link href="/" className="flex items-center w-full text-start">
                                         <CalendarClock className="w-4 h-4 mr-2" />
@@ -77,7 +77,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                                     </Link>
                                 </li>
                                 <li
-                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer text-foreground/80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer /80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                                 >
                                     <Link href="/" className="flex items-center w-full text-start">
                                         <LineChart className="w-4 h-4 mr-2" />
@@ -89,7 +89,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                     </Accordion>
                     <li
                         onClick={() => setIsOpen(false)}
-                        className="w-full px-4 py-2 text-lg hover:text-muted-foreground font-normal transition transform rounded-md cursor-pointer text-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                        className="w-full px-4 py-2 text-lg hover:text-muted-foreground font-normal transition transform rounded-md cursor-pointer  text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                     >
                         <Link href="/" className="flex items-center w-full text-start">
                             <Gem className="w-4 h-4 mr-2" />
@@ -98,7 +98,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                     </li>
                     <li
                         onClick={() => setIsOpen(false)}
-                        className="w-full px-4 py-2 text-lg hover:text-muted-foreground font-normal transition transform rounded-md cursor-pointer text-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                        className="w-full px-4 py-2 text-lg hover:text-muted-foreground font-normal transition transform rounded-md cursor-pointer  text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                     >
                         <Link href="/" className="flex items-center w-full text-start">
                             <Waypoints className="w-4 h-4 mr-2" />
@@ -115,7 +115,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                             </AccordionTrigger>
                             <AccordionContent onClick={() => setIsOpen(false)} className="flex flex-col items-start gap-1 mt-1">
                                 <li
-                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer text-foreground/80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer /80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                                 >
                                     <Link href="/" className="flex items-center w-full text-start">
                                         <Newspaper className="w-4 h-4 mr-2" />
@@ -123,7 +123,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                                     </Link>
                                 </li>
                                 <li
-                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer text-foreground/80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer /80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                                 >
                                     <Link href="/" className="flex items-center w-full text-start">
                                         <FileText className="w-4 h-4 mr-2" />
@@ -131,7 +131,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                                     </Link>
                                 </li>
                                 <li
-                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer text-foreground/80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer /80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                                 >
                                     <Link href="/" className="flex items-center w-full text-start">
                                         <Box className="w-4 h-4 mr-2" />
@@ -139,7 +139,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                                     </Link>
                                 </li>
                                 <li
-                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer text-foreground/80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
+                                    className="w-full px-4 py-2 text-lg font-normal transition transform rounded-md cursor-pointer /80 hover:text-muted-foreground text-start active:scale-95 hover:bg-muted/20 active:opacity-80"
                                 >
                                     <Link href="/" className="flex items-center w-full text-start">
                                         <CircleHelp className="w-4 h-4 mr-2" />

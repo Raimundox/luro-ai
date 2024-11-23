@@ -1,9 +1,16 @@
-"use client"
+"use client";
 
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { CalendarRangeIcon, CircleHelp, HashIcon, Newspaper, UsersIcon } from 'lucide-react';
-import Link from 'next/link';
-import React from 'react';
+import { 
+    NavigationMenu, 
+    NavigationMenuContent, 
+    NavigationMenuItem, 
+    NavigationMenuLink, 
+    NavigationMenuList, 
+    NavigationMenuTrigger 
+} from "@/components/ui/navigation-menu";
+import { CalendarRangeIcon, CircleHelp, HashIcon, Newspaper, UsersIcon } from "lucide-react";
+import Link from "next/link";
+import React from "react";
 import Icons from "../global/icons";
 
 interface Props {
@@ -17,15 +24,18 @@ const Menu = () => {
     return (
         <NavigationMenu>
             <NavigationMenuList>
+                {/* Item 1: How it works */}
                 <NavigationMenuItem>
                     <Link href="/docs" legacyBehavior passHref>
-                        <NavigationMenuLink className="h-10 px-4 py-2 text-sm font-normal rounded-md text-muted-foreground hover:text-foreground w-max hover:bg-none">
+                        <NavigationMenuLink className="h-10 px-4 py-2 text-sm font-normal rounded-md w-max bg-transparent  hover:text-primary dark:hover:text-accent-foreground">
                             How it works
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
+
+                {/* Item 2: Features */}
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-muted-foreground hover:text-foreground">
+                    <NavigationMenuTrigger className="text-sm font-normal  hover:text-primary dark:hover:text-accent-foreground">
                         Features
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -34,7 +44,7 @@ const Menu = () => {
                                 <NavigationMenuLink asChild>
                                     <Link
                                         href="/"
-                                        className="flex flex-col justify-end w-full h-full p-4 no-underline rounded-lg outline-none select-none bg-gradient-to-tr from-accent to-accent/50 focus:shadow-md"
+                                        className="flex flex-col justify-end w-full h-full p-4 no-underline rounded-lg outline-none select-none  dark:from-accent dark:to-accent/50 focus:shadow-md"
                                     >
                                         <Icons.icon className="w-6 h-6" />
                                         <div className="my-2 text-lg font-normal">
@@ -58,22 +68,28 @@ const Menu = () => {
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
+
+                {/* Item 3: Pricing */}
                 <NavigationMenuItem>
                     <Link href="/pricing" legacyBehavior passHref>
-                        <NavigationMenuLink className="h-10 px-4 py-2 text-sm font-normal rounded-md text-muted-foreground hover:text-foreground w-max hover:bg-none">
+                        <NavigationMenuLink className="h-10 px-4 py-2 text-sm font-normal rounded-md bg-transparent  hover:text-primary dark:hover:text-accent-foreground">
                             Pricing
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
+
+                {/* Item 4: Integrations */}
                 <NavigationMenuItem>
                     <Link href="/integrations" legacyBehavior passHref>
-                        <NavigationMenuLink className="h-10 px-4 py-2 text-sm font-normal rounded-md text-muted-foreground hover:text-foreground w-max hover:bg-none">
+                        <NavigationMenuLink className="h-10 px-4 py-2 text-sm font-normal rounded-md bg-transparent  hover:text-primary dark:hover:text-accent-foreground">
                             Integrations
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
+
+                {/* Item 5: Resources */}
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-muted-foreground hover:text-foreground">
+                    <NavigationMenuTrigger className="font-normal  hover:text-primary dark:hover:text-accent-foreground">
                         Resources
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -89,7 +105,7 @@ const Menu = () => {
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>
-    )
+    );
 };
 
 const Item = ({ title, href, children, icon, ...props }: Props) => {
@@ -100,25 +116,25 @@ const Item = ({ title, href, children, icon, ...props }: Props) => {
                     passHref
                     href={href}
                     {...props}
-                    className="grid grid-cols-[.15fr_1fr] select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/50 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground group"
+                    className="grid grid-cols-[.15fr_1fr] select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none  hover:text-primary dark:hover:bg-accent/50 dark:hover:text-accent-foreground group"
                 >
-                    <div className="flex items-center mt-1 justify-center p-1 w-8 h-8 rounded-md border border-border/80">
+                    <div className="flex items-center justify-center p-1 w-8 h-8 rounded-md border border-gray-300 dark:border-border/80">
                         {icon}
                     </div>
                     <div className="text-start ml-3">
-                        <span className="text-sm group-hover:text-foreground font-normal leading-none">
+                        <span className="text-sm font-normal leading-none text-muted-foreground dark:text-foreground">
                             {title}
                         </span>
-                        <p className="text-sm mt-0.5 line-clamp-2 text-muted-foreground">
+                        <p className="text-sm mt-0.5 line-clamp-2 text-muted-foreground dark:text-muted-foreground/70">
                             {children}
                         </p>
                     </div>
                 </Link>
             </NavigationMenuLink>
         </li>
-    )
+    );
 };
 
 Item.displayName = "Item";
 
-export default Menu
+export default Menu;
