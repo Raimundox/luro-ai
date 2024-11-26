@@ -45,14 +45,11 @@ const SignInForm = () => {
     const [isEmailLoading, setIsEmailLoading] = useState<boolean>(false);
     const [isCodeLoading, setIsCodeLoading] = useState<boolean>(false);
     const [isGoogleLoading, setIsGoogleLoading] = useState<boolean>(false);
-    const [isAppleLoading, setIsAppleLoading] = useState<boolean>(false);
 
     const handleOAuth = async (strategy: OAuthStrategy) => {
         if (strategy === "oauth_google") {
             setIsGoogleLoading(true);
-        } else {
-            setIsAppleLoading(true);
-        }
+        } 
 
         try {
             await signIn?.authenticateWithRedirect({
@@ -222,9 +219,8 @@ const SignInForm = () => {
                             <Button
                                 size="lg"
                                 type="button"
-                                disabled={isGoogleLoading || isAppleLoading || isEmailLoading}
+                                disabled={isGoogleLoading || isEmailLoading}
                                 onClick={() => handleOAuth("oauth_google")}
-                                variant="tertiary"
                                 className="w-full"
                             >
                                 {isGoogleLoading ? (
@@ -239,21 +235,7 @@ const SignInForm = () => {
                             <Button
                                 size="lg"
                                 type="button"
-                                disabled={isGoogleLoading || isAppleLoading || isEmailLoading}
-                                onClick={() => handleOAuth("oauth_apple")}
-                                variant="tertiary"
-                                className="w-full"
-                            >
-                                {isAppleLoading ? <LoadingIcon size="sm" className="w-4 h-4 absolute left-4" /> : <Icons.apple className="w-4 h-4 absolute left-4" />}
-                                Continue with Apple
-                            </Button>
-                        </div>
-                        <div className="w-full">
-                            <Button
-                                size="lg"
-                                type="button"
-                                variant="tertiary"
-                                disabled={isGoogleLoading || isAppleLoading || isEmailLoading}
+                                disabled={isGoogleLoading || isEmailLoading}
                                 onClick={() => setIsEmailOpen(false)}
                                 className="w-full"
                             >

@@ -1,4 +1,4 @@
-import { ClockIcon, MessageSquare, BarChart2, FileTextIcon, UserPlusIcon, CreditCardIcon, SettingsIcon, LogOut, Headphones, ChartPieIcon, LucideIcon, MessagesSquareIcon, NewspaperIcon, MegaphoneIcon, LineChartIcon, MessageSquareTextIcon, UsersIcon } from 'lucide-react';
+import { ClockIcon, MessageSquare, BarChart2, FileTextIcon, UserPlusIcon, CreditCardIcon, SettingsIcon, LogOut, Headphones, ChartPieIcon, LucideIcon, MessagesSquareIcon, NewspaperIcon, MegaphoneIcon, LineChartIcon, MessageSquareTextIcon, UsersIcon, Tags, Package } from 'lucide-react';
 
 type Link = {
     href: string;
@@ -8,28 +8,18 @@ type Link = {
 
 export const SIDEBAR_LINKS: Link[] = [
     {
-        href: "/dashboard",
+        href: "/app/dashboard",
         label: "Dashboard",
         icon: ChartPieIcon,
     },
     {
-        href: "/dashboard/campaigns",
-        label: "Campaigns",
-        icon: MegaphoneIcon
+        href: "/app/products",
+        label: "Estoque",
+        icon: Package
     },
     {
-        href: "/dashboard/analytics",
-        label: "Analytics",
-        icon: LineChartIcon
-    },
-    {
-        href: "/dashboard/posts",
-        label: "Posts",
-        icon: MessageSquareTextIcon
-    },
-    {
-        href: "/dashboard/engagement",
-        label: "Engagement",
+        href: "/app/clients",
+        label: "Clientes",
         icon: UsersIcon
     },
     {

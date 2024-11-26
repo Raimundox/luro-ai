@@ -32,10 +32,10 @@ const AuthCallbackPage = async () => {
         });
 
         console.log("criando usuario");
-        redirect("/app");
+        redirect("/app/dashboard");
     }
 
-    redirect("/app");
+    redirect("/app/dashboard");
 };
 
 export default AuthCallbackPage

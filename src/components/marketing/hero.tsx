@@ -18,11 +18,11 @@ const Hero = () => {
                         <div className="w-1.5 h-1.5 rounded-full bg-primary flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                         </div>
                     </div>
-                    <span className="inline-flex items-center justify-center gap-2 animate-text-gradient animate-background-shine bg-gradient-to-r from-primary to-secondary bg-[200%_auto] bg-clip-text text-sm text-transparent dark:inline-flex items-center justify-center gap-2 animate-text-gradient animate-background-shine bg-gradient-to-r from-[#b2a8fd] via-[#8678f9] to-[#c7d2fe] bg-[200%_auto] bg-clip-text text-sm text-transparent">
+                    <span className="inline-flex items-center justify-center gap-2 animate-text-gradient animate-background-shine bg-gradient-to-r from-black via-gray-500 to-white bg-[200%_auto] bg-clip-text text-sm text-transparent">
                         Build for the future
-                        <span className="text-xs text-foreground px-1.5 py-0.5 rounded-full bg-primary bg-[200%_auto] from-muted/30 to-muted/20 flex items-center justify-center dark:from-foreground/20 dark:to-foreground/10 dark:text-secondary-foreground">
+                        <span className="text-xs text-white px-1.5 py-0.5 rounded-full bg-primary bg-[200%_auto] from-muted/30 to-muted/20 flex items-center justify-center dark:from-foreground/20 dark:to-foreground/10 dark:text-black">
                             What&apos;s new
-                            <ArrowRightIcon className="w-3.5 h-3.5 ml-1 text-foreground/60 dark:text-foreground/50" />
+                            <ArrowRightIcon className="w-3.5 h-3.5 ml-1 text-white dark:text-black" />
                         </span>
 
                     </span>
@@ -40,7 +40,7 @@ const Hero = () => {
             <Container delay={0.2}>
                 <div className="flex items-center justify-center md:gap-x-6 mt-8">
                     <Button asChild size="lg">
-                        <Link href="/app">
+                        <Link href="/app/dashboard">
                             Start for free
                         </Link>
                     </Button>

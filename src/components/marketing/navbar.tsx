@@ -1,6 +1,6 @@
 "use client";
 
-import  ModeToggle  from "../global/mode-toggle";
+import ModeToggle from "../global/mode-toggle";
 import { cn } from "@/functions";
 import { useClerk } from "@clerk/nextjs";
 import { ArrowRightIcon, XIcon } from "lucide-react";
@@ -52,15 +52,15 @@ const Navbar = () => {
             <div className="items-center flex gap-2 lg:gap-4">
               {user ? (
                 <Button size="sm" variant="white" asChild className="hidden sm:flex">
-                  <Link href="/app">Dashboard</Link>
+                  <Link href="/app/dashboard">Dashboard</Link>
                 </Button>
               ) : (
                 <>
-                 <Button size="sm" variant="tertiary" asChild className="hover:translate-y-0 hover:scale-100">
-                                        <Link href="/auth/signin">
-                                            Login
-                                        </Link>
-                                    </Button>
+                  <Button size="sm" variant="outline" asChild className="hover:translate-y-0 hover:scale-100">
+                    <Link href="/auth/signin">
+                      Login
+                    </Link>
+                  </Button>
                   <Button
                     size="sm"
                     asChild

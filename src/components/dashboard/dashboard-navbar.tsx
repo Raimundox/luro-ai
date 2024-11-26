@@ -6,6 +6,7 @@ import { HelpCircleIcon, ZapIcon } from "lucide-react";
 import Link from "next/link";
 import Container from "../global/container";
 import { Button } from "../ui/button";
+import ModeToggle from "../global/mode-toggle";
 
 const DashboardNavbar = () => {
     return (
@@ -38,6 +39,7 @@ const DashboardNavbar = () => {
                         </Link>
                     </Button>
                     <MobileSidebar />
+                    <ModeToggle />
                 </div>
             </Container>
         </header>

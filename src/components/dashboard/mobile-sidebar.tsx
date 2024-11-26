@@ -56,7 +56,7 @@ const MobileSidebar = () => {
                                             href={link.href}
                                             className={buttonVariants({
                                                 variant: "ghost",
-                                                className: isActive ? "bg-muted text-primary w-full !justify-start" : "text-foreground/70 w-full !justify-start",
+                                                className: isActive ? "bg-muted text-primary w-full !justify-start" : " w-full !justify-start",
                                                 // "w-full !justify-start text-foreground/70"
                                             })}
                                         >
