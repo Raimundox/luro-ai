@@ -1,3 +1,5 @@
+import { ArrowDownIcon, ArrowUpIcon } from "@radix-ui/react-icons";
+
 export const categories = [
   {
     value: "maquiagem",
@@ -25,5 +27,18 @@ export const brands = [
   {
     value: "urbanDecay",
     label: "Urban Decay"
+  }
+];
+
+export const incomeType = [
+  {
+    label: "Income",
+    value: "income",
+    icon: ArrowUpIcon
+  },
+  {
+    label: "Expense",
+    value: "expense",
+    icon: ArrowDownIcon
   }
 ];
